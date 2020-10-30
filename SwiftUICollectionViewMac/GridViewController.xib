@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17156" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17156"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="GridViewController" customModule="SwiftUICollectionViewMac" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="1pK-QA-Qgr" id="XJy-8o-Eok"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="sGr-6t-gNQ"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qa4-Ke-CCb">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+                    <clipView key="contentView" id="kvc-xh-94r">
+                        <rect key="frame" x="1" y="1" width="478" height="270"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView id="1pK-QA-Qgr">
+                                <rect key="frame" x="0.0" y="0.0" width="478" height="158"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="rqG-tz-igH">
+                                    <size key="itemSize" width="50" height="50"/>
+                                </collectionViewFlowLayout>
+                                <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="-2" id="iQd-i1-exr"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="UGo-SP-7Q1">
+                        <rect key="frame" x="1" y="144" width="233" height="15"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="221-6s-UZX">
+                        <rect key="frame" x="234" y="1" width="15" height="143"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Qa4-Ke-CCb" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="AMm-Qq-xsu"/>
+                <constraint firstItem="Qa4-Ke-CCb" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="Pig-P2-5KN"/>
+                <constraint firstAttribute="bottom" secondItem="Qa4-Ke-CCb" secondAttribute="bottom" id="W1o-bL-zmu"/>
+                <constraint firstAttribute="trailing" secondItem="Qa4-Ke-CCb" secondAttribute="trailing" id="k8g-1r-AID"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="154"/>
+        </customView>
+    </objects>
+</document>
